@@ -238,5 +238,8 @@ interface IProgressSlice {
    * @param text - The text this Text object will display.
    * @param style - The Text style configuration object.
    */
-  setText(text: string | Array<string>, style?: Phaser.Types.GameObjects.Text.TextStyle): IProgressSlice;
+  setText(
+    text: string | Array<string>,
+    style?: Phaser.Types.GameObjects.Text.TextStyle
+  ): IProgressSlice;
 }

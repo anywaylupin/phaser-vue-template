@@ -5,8 +5,9 @@
     "vitest.config.*",
     "cypress.config.*",
     "nightwatch.conf.*",
-    "playwright.config.*"
-, "vite.config.ts"  ],
+    "playwright.config.*",
+    "vite.config.ts"
+  ],
   "compilerOptions": {
     "composite": true,
     "module": "ESNext",

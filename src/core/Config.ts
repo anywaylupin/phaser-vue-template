@@ -1,3 +1,10 @@
+export const CONTAINER_WIDTH = 1280;
+export const SCENE_KEY = {
+  BOOT: 'boot',
+  PRELOADER: 'preloader',
+  LEVEL: 'level'
+};
+
 export const GAME_CONFIG = <Phaser.Types.Core.GameConfig>{
   width: 1280,
   height: 720,

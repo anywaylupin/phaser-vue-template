@@ -1,7 +1,10 @@
 /**
  * Represents a mixin class for creating and updating numeric tween animations.
  */
-export default abstract class ProgressTween extends Phaser.GameObjects.Container implements IProgressTween {
+export default abstract class ProgressTween
+  extends Phaser.GameObjects.Container
+  implements IProgressTween
+{
   private tween?: Phaser.Tweens.Tween;
   abstract onUpdate(value: number): void;
   value = 0;

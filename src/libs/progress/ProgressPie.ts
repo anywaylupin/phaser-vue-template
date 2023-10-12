@@ -79,11 +79,27 @@ export default class ProgressPie extends ProgressTween implements IProgressPie {
     switch (this.renderType) {
       case ProgressRenderType.COLOR:
         this.pie.lineStyle(this.borderWidth, this.borderColor).beginPath();
-        this.pie.arc(0, 0, this.radius, this.startAngle, this.endAngle, this.anticlockwise, this.overshoot);
+        this.pie.arc(
+          0,
+          0,
+          this.radius,
+          this.startAngle,
+          this.endAngle,
+          this.anticlockwise,
+          this.overshoot
+        );
         this.pie.strokePath().closePath().beginPath();
 
         this.pie.lineStyle(this.fillWidth, this.fillColor);
-        this.pie.arc(0, 0, this.radius, this.startAngle, this.progress, this.anticlockwise, this.overshoot);
+        this.pie.arc(
+          0,
+          0,
+          this.radius,
+          this.startAngle,
+          this.progress,
+          this.anticlockwise,
+          this.overshoot
+        );
         this.pie.strokePath().closePath();
         break;
       case ProgressRenderType.TEXTURE:
@@ -105,7 +121,13 @@ export default class ProgressPie extends ProgressTween implements IProgressPie {
     }
   }
 
-  setColor(radius: number, borderWidth: number, fillWidth: number, borderColor: number, fillColor: number) {
+  setColor(
+    radius: number,
+    borderWidth: number,
+    fillWidth: number,
+    borderColor: number,
+    fillColor: number
+  ) {
     this.radius = radius;
     this.borderWidth = borderWidth;
     this.fillWidth = fillWidth;

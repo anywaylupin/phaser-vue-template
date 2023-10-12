@@ -16,10 +16,10 @@
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "type-check": "vue-tsc --noEmit -p tsconfig.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --fix --ignore-path .gitignore",
     "format": "prettier --write ./",
-    "fix": "pnpm format && pnpm lint"
+    "fix": "pnpm format && pnpm type-check && pnpm lint"
   },
   "author": {
     "email": "lupin.nguyen@outlook.com",

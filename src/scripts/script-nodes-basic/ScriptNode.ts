@@ -1,4 +1,4 @@
-import { GameEvents } from '../events';
+import { GameEvents } from '@/events';
 
 export default abstract class ScriptNode {
   private _scene: Phaser.Scene;

@@ -73,7 +73,12 @@ export default class ProgressSlice extends ProgressTween implements IProgressSli
     this.bar.setSize(this.maxWidth * value, this.bar.height);
   }
 
-  setBackground(x: number, y: number, texture: string | Phaser.Textures.Texture, frame: string | number) {
+  setBackground(
+    x: number,
+    y: number,
+    texture: string | Phaser.Textures.Texture,
+    frame: string | number
+  ) {
     if (this.background instanceof Phaser.GameObjects.GameObject)
       this.background.setPosition(x, y).setTexture(texture, frame);
     else {
@@ -85,7 +90,8 @@ export default class ProgressSlice extends ProgressTween implements IProgressSli
   }
 
   setText(text: string | Array<string>, style?: Phaser.Types.GameObjects.Text.TextStyle) {
-    if (this.text instanceof Phaser.GameObjects.GameObject) this.text.setText(text).setStyle(style || this.text.style);
+    if (this.text instanceof Phaser.GameObjects.GameObject)
+      this.text.setText(text).setStyle(style || this.text.style);
     else {
       this.text = this.scene.add.text(0, 0, text, style).setOrigin(0.5);
       this.add(this.text);

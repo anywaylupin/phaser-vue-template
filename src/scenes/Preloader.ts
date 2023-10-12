@@ -1,9 +1,9 @@
 // You can write more code here
 
 /* START OF COMPILED CODE */
-import PreloadBarUpdaterScript from '../script-nodes/PreloadBarUpdaterScript';
-import { SCENE_KEY } from '../constants';
-import { GameEvents } from '../events';
+import { SCENE_KEY } from '@/core';
+import { GameEvents } from '@/events';
+import { PreloadBarUpdaterScript } from '@/scripts';
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 

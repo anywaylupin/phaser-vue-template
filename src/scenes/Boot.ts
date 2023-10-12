@@ -1,4 +1,4 @@
-import { CONTAINER_WIDTH, SCENE_KEY } from '../constants';
+import { CONTAINER_WIDTH, SCENE_KEY } from '@/core';
 
 export default class BootScene extends Phaser.Scene {
   constructor() {

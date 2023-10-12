@@ -1,11 +1,12 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 /** {@link https://vitejs.dev/config/} */
 export default defineConfig({
+  publicDir: 'static',
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
@@ -20,18 +21,25 @@ export default defineConfig({
     }
   },
   build: {
+    assetsDir: '',
     minify: 'terser',
+    terserOptions: {
+      format: {
+        comments: false
+      }
+    },
     rollupOptions: {
       output: {
-        manualChunks(id: string) {
-          if (id.includes('vue')) {
-            return 'vue'
-          }
-          if (id.includes('phaser')) {
-            return 'phaser'
+        manualChunks(id: string): string | void {
+          switch (true) {
+            case id.includes('node_modules/phaser'):
+              return 'phaser';
+            case id.includes('node_modules/vue'):
+            case id.includes('node_modules/@vue'):
+              return 'vue';
           }
         }
       }
     }
   }
-})
+});

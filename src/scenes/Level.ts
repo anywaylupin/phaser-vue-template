@@ -1,10 +1,8 @@
 // You can write more code here
 
 /* START OF COMPILED CODE */
-import { TEXT_STYLES } from '../constants';
-import { GameEvents } from '../events';
-import OnPointerDownScript from '../script-nodes-basic/OnPointerDownScript';
-import PushActionScript from '../script-nodes/PushActionScript';
+import { GameEvents } from '@/events';
+import { OnPointerDownScript, PushActionScript } from '@/scripts';
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -31,7 +29,6 @@ export default class Level extends Phaser.Scene {
     const text = this.add.text(640, 458, '', {});
     text.setOrigin(0.5, 0.5);
     text.text = 'Phaser 3 + Phaser Editor 2D\nWebpack + TypeScript';
-    text.setStyle(TEXT_STYLES.LOADING);
 
     this.events.emit(GameEvents.SCENE_AWAKE);
 

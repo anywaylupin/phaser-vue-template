@@ -48,7 +48,13 @@ export default class ProgressBar extends ProgressTween implements IProgressBar {
   private fillBar(color: number, widthMultiplier: number) {
     this.bar
       .fillStyle(color, 0)
-      .fillRoundedRect(-this.barWidth / 2, -this.barHeight / 2, this.barWidth * widthMultiplier, this.barHeight, 3);
+      .fillRoundedRect(
+        -this.barWidth / 2,
+        -this.barHeight / 2,
+        this.barWidth * widthMultiplier,
+        this.barHeight,
+        3
+      );
     return this.bar;
   }
 
@@ -75,7 +81,13 @@ export default class ProgressBar extends ProgressTween implements IProgressBar {
     switch (this.renderType) {
       case ProgressRenderType.COLOR:
         this.bar.fillStyle(this.borderColor);
-        this.bar.fillRoundedRect(-this.barWidth / 2, -this.barHeight / 2, this.barWidth, this.barHeight, 3);
+        this.bar.fillRoundedRect(
+          -this.barWidth / 2,
+          -this.barHeight / 2,
+          this.barWidth,
+          this.barHeight,
+          3
+        );
 
         this.fillBar(0xffffff, 1);
         this.fillBar(this.fillColor, this.value);
@@ -90,7 +102,14 @@ export default class ProgressBar extends ProgressTween implements IProgressBar {
     }
   }
 
-  setColor(width: number, height: number, paddingX: number, paddingY: number, borderColor: number, fillColor: number) {
+  setColor(
+    width: number,
+    height: number,
+    paddingX: number,
+    paddingY: number,
+    borderColor: number,
+    fillColor: number
+  ) {
     this.barWidth = width;
     this.barHeight = height;
     this.paddingX = paddingX;
