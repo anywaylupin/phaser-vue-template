@@ -60,7 +60,7 @@ For production (recommended before deployment):
 
 ```sh
    pnpm build
-pnpm test:e2e
+   pnpm test:e2e
 ```
 
 ## Linting (ESLint)
@@ -79,7 +79,7 @@ Install dependencies:
 
 ```sh
    pnpm install
-pnpm update
+   pnpm update
 ```
 
 Run the development server:
@@ -93,7 +93,7 @@ Open the browser at `http://127.0.0.1:8080`.
 Make a production build:
 
 ```sh
-   pnpm run build
+   pnpm build
 ```
 
 ## Gitpod
@@ -104,7 +104,7 @@ This repo is Gitpod-ready for cloud development. [Click here](https://gitpod.io/
 
 1. Create a GitHub repository.
 2. In **Settings** > **GitHub Pages**, set **GitHub Actions** in the **Source** parameter.
-3. Run the **Build game with webpack** workflow in **Actions**.
+3. Run the **Build game** workflow in **Actions**.
 4. Check the deployed game URL in **Settings** > **GitHub Pages**.
 5. Subsequent pushes to `main` branch auto-deploy.
 
@@ -117,19 +117,19 @@ Watch this [video tutorial](https://www.youtube.com/watch?v=lndU7UAjzgo&t=183s) 
 - Run locally:
 
 ```sh
-   pnpm run editor
+   pnpm editor
 ```
 
 - Run in a remote environment (e.g., Gitpod):
 
 ```sh
-   pnpm run editor-remote
+   pnpm editor-remote
 ```
 
 For more options:
 
 ```sh
-   npx phasereditor2d-launcher -help
+   pnpm phasereditor2d-launcher -help
 ```
 
 If globally installed:
@@ -166,7 +166,7 @@ Configured to compile to TypeScript ES modules. Compilers auto-import used class
 
 ### ScriptNodes
 
-`/src/script-nodes-basic` has script nodes. Add custom ones to `/src/script-nodes`.
+`/src/scripts/script-nodes-basic` has script nodes. Add custom ones to `/src/scripts/script-nodes`.
 
 ## About
 
