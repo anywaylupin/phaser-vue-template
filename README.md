@@ -4,7 +4,7 @@
 
 This template integrates Phaser 3, Vue 3, TypeScript, and Phaser Editor 2D v3 for game development. Additionally, it includes setup instructions for Visual Studio Code with Volar for an enhanced development experience and a GitHub Pages deployment workflow for easy hosting.
 
-![Header](static/header.jpg)
+![Header](static/header.png)
 
 ## Recommended IDE Setup
 

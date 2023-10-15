@@ -50,6 +50,7 @@
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
     "npm-run-all2": "^6.1.1",
+    "nuxtjs-phaser": "^3.0.17",
     "phaser-asset-pack-hashing": "^1.0.6",
     "phaser3spectorjs": "^0.0.8",
     "phasereditor2d-launcher": "^3.63.0",
@@ -60,5 +61,11 @@
     "vite": "^4.4.11",
     "vitest": "^0.34.6",
     "vue-tsc": "^1.8.19"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "printWidth": 100,
+    "trailingComma": "none"
   }
 }

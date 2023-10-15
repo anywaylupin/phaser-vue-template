@@ -67,6 +67,9 @@ devDependencies:
   npm-run-all2:
     specifier: ^6.1.1
     version: 6.1.1
+  nuxtjs-phaser:
+    specifier: ^3.0.17
+    version: 3.0.17
   phaser-asset-pack-hashing:
     specifier: ^1.0.6
     version: 1.0.6
@@ -2997,7 +3000,6 @@ packages:
       {
         integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
       }
-    dev: false
 
   /execa@4.1.0:
     resolution:
@@ -4490,6 +4492,17 @@ packages:
       boolbase: 1.0.0
     dev: true
 
+  /nuxtjs-phaser@3.0.17:
+    resolution:
+      {
+        integrity: sha512-DUwfExEZywZN5T5x0d97os3wkX5iICnkpgbaa9SfUyrLn8qlfjJD7grGd20oTjnRgESgCWUXCukH/YMePSQgVQ==
+      }
+    dependencies:
+      phaser: 3.60.0
+      typescript: 5.2.2
+      vue: 3.3.4
+    dev: true
+
   /nwsapi@2.2.7:
     resolution:
       {
@@ -4744,7 +4757,6 @@ packages:
       }
     dependencies:
       eventemitter3: 5.0.1
-    dev: false
 
   /phasereditor2d-launcher@3.63.0:
     resolution:

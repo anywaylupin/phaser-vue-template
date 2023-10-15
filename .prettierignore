@@ -1,8 +1,0 @@
-node_modules/
-# Ignore artifacts:
-build/
-dist/
-coverage/
-
-vite-env.d.ts
-vite.config.ts
