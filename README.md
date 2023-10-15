@@ -2,7 +2,9 @@
 
 ## Overview
 
-This template integrates Phaser 3, Webpack 5, TypeScript, and Phaser Editor 2D v3 for game development. Additionally, it includes setup instructions for Visual Studio Code with Volar for an enhanced development experience and a GitHub Pages deployment workflow for easy hosting.
+This template integrates Phaser 3, Vue 3, TypeScript, and Phaser Editor 2D v3 for game development. Additionally, it includes setup instructions for Visual Studio Code with Volar for an enhanced development experience and a GitHub Pages deployment workflow for easy hosting.
+
+![Header](static/header.jpg)
 
 ## Recommended IDE Setup
 
@@ -73,7 +75,7 @@ For detailed Vite configuration, refer to [Vite Configuration Reference](https:/
 
 ## First Steps
 
-Ensure Node.js and npm are installed. Familiarize yourself with [Webpack.js](https://webpack.js.org).
+Ensure Node.js and npm are installed.
 
 Install dependencies:
 
@@ -95,10 +97,6 @@ Make a production build:
 ```sh
    pnpm build
 ```
-
-## Gitpod
-
-This repo is Gitpod-ready for cloud development. [Click here](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack) to start coding.
 
 ## Hosting on GitHub Pages
 
@@ -152,7 +150,7 @@ Change the asset root by creating an empty `publicroot` file. E.g., `/static/pub
 
 ### Asset Pack Content Hash
 
-Webpack includes content hash for asset pack files. Use `phaser-asset-pack-hashing` for parsing and transforming.
+Includes content hash for asset pack files. Use `phaser-asset-pack-hashing` for parsing and transforming.
 
 Learn more about [phaser-asset-pack-hashing](https://www.pnpmjs.com/package/phaser-asset-pack-hashing).
 
