@@ -1,218 +1,175 @@
-# phaser-vue
+# Phaser + PhaserEditor2D + Vue + TypeScript Project Template
 
-This template should help get you started developing with Vue 3 in Vite.
+## Overview
+
+This template integrates Phaser 3, Webpack 5, TypeScript, and Phaser Editor 2D v3 for game development. Additionally, it includes setup instructions for Visual Studio Code with Volar for an enhanced development experience and a GitHub Pages deployment workflow for easy hosting.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+For an optimal development setup, use VSCode with the following extensions:
+
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur)
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+
+If you find the standalone TypeScript plugin slow, consider enabling the more performant Take Over Mode provided by Volar.
 
 ## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Due to TypeScript limitations with `.vue` imports, use `vue-tsc` for type checking. In VSCode, the TypeScript Vue Plugin (Volar) is essential for TypeScript awareness of `.vue` types.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+To enable Volar's Take Over Mode for improved performance:
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. Disable the built-in TypeScript Extension:
+   - Run `Extensions: Show Built-in Extensions` from VSCode's command palette.
+   - Find `TypeScript and JavaScript Language Features`, right-click, and select `Disable (Workspace)`.
+2. Reload VSCode by running `Developer: Reload Window` from the command palette.
 
 ## Project Setup
 
 ```sh
-pnpm install
+   pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
-pnpm dev
+   pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Production Build
 
 ```sh
-pnpm build
+   pnpm build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Unit Tests (Vitest)
 
 ```sh
-pnpm test:unit
+   pnpm test:unit
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+### End-to-End Tests (Cypress)
+
+For development:
 
 ```sh
-pnpm test:e2e:dev
+   pnpm test:e2e:dev
 ```
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+For production (recommended before deployment):
 
 ```sh
-pnpm build
+   pnpm build
 pnpm test:e2e
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Linting (ESLint)
 
 ```sh
-pnpm lint
+   pnpm lint
 ```
 
-## Vite + TypeScript project template for Phaser Editor 2D
+For detailed Vite configuration, refer to [Vite Configuration Reference](https://vitejs.dev/config/).
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack)
+## First Steps
 
-A project template for Phaser 3, Webpack 5, TypeScript, and Phaser Editor 2D v3.
-It also includes a workflow for deploying the game to GitHub Pages.
+Ensure Node.js and npm are installed. Familiarize yourself with [Webpack.js](https://webpack.js.org).
 
-## First steps
+Install dependencies:
 
-This project requires [Node.js](https://nodejs.org) and [npm.js](https://www.npm.com). It is recommended that you learn the basics of [Webpack.js](https://webpack.js.org).
+```sh
+   pnpm install
+pnpm update
+```
 
-- Install dependencies:
+Run the development server:
 
-  ```bash
-  pnpm install
-  pnpm update
-  ```
+```sh
+   pnpm start
+```
 
-- Run the development server:
+Open the browser at `http://127.0.0.1:8080`.
 
-  ```bash
-  pnpm start
-  ```
+Make a production build:
 
-  Open the browser at `http://127.0.0.1:8080`.
-
-- Make a production build:
-
-  ```bash
-  pnpm run build
-  ```
-
-  It is generated in the `/dist` folder.
+```sh
+   pnpm run build
+```
 
 ## Gitpod
 
-This repository is ready for start coding in Gitpod, a Cloud Development Environment. You only need to [click on this link](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack) for starting a new workspace.
+This repo is Gitpod-ready for cloud development. [Click here](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack) to start coding.
 
-This is what Gitpod does:
+## Hosting on GitHub Pages
 
-- Creates a workspace for this project.
-- Opens VS Code to edit this repo.
-- Installs & updates the dependencies of this repo.
-- Runs the Webpack development server in port `8080`.
-- Runs Phaser Editor 2D Core server in port `1959`.
+1. Create a GitHub repository.
+2. In **Settings** > **GitHub Pages**, set **GitHub Actions** in the **Source** parameter.
+3. Run the **Build game with webpack** workflow in **Actions**.
+4. Check the deployed game URL in **Settings** > **GitHub Pages**.
+5. Subsequent pushes to `main` branch auto-deploy.
 
-In the **Ports** panel in VS Code, it shows the links for opening the game (port `8080`) & the editor (port `1959`). It gives you the options of copy the URL, open the URL in a preview panel, or open the URL in a new tab.
+Remove `.github/workflows/main.yml` if not deploying to GitHub Pages.
 
-## Hosting your game on GitHub Pages
+Watch this [video tutorial](https://www.youtube.com/watch?v=lndU7UAjzgo&t=183s) for more details.
 
-If you are looking for a hosting for you game, GitHub Pages is a very nice and free option.
-This repository includes a workflow for publishing the game into GitHub Pages automatically.
+## Running the Editor
 
-Just follow these steps:
+- Run locally:
 
-- Create a GitHub repository with the project (something that probably you already did).
-- In GitHub, open the repository and go to **Settings** > **GitHub Pages**.
-- In the **Build and deployment** section, set the **GitHub Actions** option in the **Source** parameter.
-- Run the **Build game with webpack** workflow in the **Actions** section on the repository.
-- When the workflow completes, return to the **Settings** > **GitHub Pages** section and check the address for the deployed game. It should show a message like **Your site is live at https://\<USERNAME>.github.io/<REPOSITORY_NAME>/**.
-- Next time you push changes to the `main` branch it will run the workflow and deploy the game automatically.
+```sh
+   pnpm run editor
+```
 
-If you don't want to deploy your game to GitHub Pages, then you can remove the `.github/workflows/main.yml` file.
+- Run in a remote environment (e.g., Gitpod):
 
-In this video I explain many of these concepts: [Start making a game in the cloud. GitHub + VS Code + Phaser Editor 2D [Tutorial]](https://www.youtube.com/watch?v=lndU7UAjzgo&t=183s)
+```sh
+   pnpm run editor-remote
+```
 
-## Run the editor
+For more options:
 
-- You can run the editor using the `editor` pnpm script, defined in the `package.json` file:
+```sh
+   npx phasereditor2d-launcher -help
+```
 
-  ```bash
-  pnpm run editor
-  ```
+If globally installed:
 
-- If you are in a remote environment (like the Gitpod.io IDE), then run the editor like this:
+```sh
+   PhaserEditor2D -project .
+```
 
-  ```bash
-  pnpm run editor-remote
-  ```
+## Phaser Editor 2D Considerations
 
-- If you want to see all the editor options, run:
+### Excluding Files
 
-  ```bash
-  npx phasereditor2d-launcher -help
-  ```
+Use `/skip` to exclude files from the editor project, e.g., `node_modules`.
 
-- If Phaser Editor 2D Core is globally installed, you can run:
+Learn more about [resource filtering](https://help.phasereditor2d.com/v3/misc/resources-filtering.html).
 
-  ```bash
-  PhaserEditor2D -project .
-  ```
+### Asset Root
 
-## Phaser Editor 2D considerations
+Change the asset root by creating an empty `publicroot` file. E.g., `/static/publicroot`.
 
-### Excluding files from the project
+### Asset Pack Content Hash
 
-There are a lot of files present in the project that are not relevant to Phaser Editor 2D. For example, the whole `node_modules` folder should be excluded from the editor's project.
+Webpack includes content hash for asset pack files. Use `phaser-asset-pack-hashing` for parsing and transforming.
 
-The `/.skip` file lists the folders and files to exclude from the editor's project.
-
-[Learn more about resource filtering in Phaser Editor 2D](https://help.phasereditor2d.com/v3/misc/resources-filtering.html)
-
-### Setting the root folder for the game's assets
-
-The `/static` folder contains the assets (images, audio, atlases) used by the game. Webpack copies it to the distribution folder and makes it available as a root path. For example, `http://127.0.0.1:8080/assets` points to the `/static/assets` folder.
-
-By default, Phaser Editor 2D uses the project's root as the start path for the assets. You can change it by creating an empty `publicroot` file. That is the case of the `/static/publicroot` file, which allows adding files to the Asset Pack file (`/static/assets/asset-pack.json`) using correct URLs.
-
-### Asset Pack content hash
-
-Webpack is configured to include the content hash of a file defined in an asset pack editor:
-
-- For loading a pack file in code, import it as a resource:
-
-  ```javascript
-  import assetPackUrl from "../static/assets/asset-pack.json";
-  ...
-  this.load.pack("pack1", assetPackUrl);
-  ```
-
-  Webpack will add the `asset-pack.json` file into the distribution files, in the folder `dist/asset-packs/`.
-
-- Because Webpack automatically imports the pack files, those are excluded in the **CopyPlugin** configuration. By convention, name the pack files like this `[any name]-pack.json`.
-
-- The pnpm `build` script calls the `phaser-asset-pack-hashing` tool. It parses all pack files in the `dist/` folder and transform the internal URL, adding the content-hash to the query string. It also parses files referenced by the pack. For example, a multi-atlas file is parsed and the name of the image's file will be changed to use a content-hash.
-
-Learn more about the [phaser-asset-pack-hashing](https://www.pnpmjs.com/package/phaser-asset-pack-hashing) tool.
+Learn more about [phaser-asset-pack-hashing](https://www.pnpmjs.com/package/phaser-asset-pack-hashing).
 
 ### Coding
 
-The `/src` folder contains all the TypeScript code, including the scene and user component files, in addition to the Phaser Editor 2D compilers output.
+`/src` contains TypeScript code, including scenes and user components. Visual Studio Code is recommended.
 
-We recommend using Visual Studio Code for editing the code files.
+### Scene, User Components, and ScriptNode Configuration
 
-In many tutorials about Phaser Editor 2D, the JavaScript files are loaded using the Asset Pack editor. When using Webpack this is not needed. Just use the Asset Pack editor for loading the art assets.
-
-### Scene, User Components, and ScriptNode configuration
-
-The Scenes, User Components, and ScriptNodes are configured to compile to TypeScript ES modules. Also, the compilers auto-import the classes used in the generated code.
+Configured to compile to TypeScript ES modules. Compilers auto-import used classes.
 
 ### ScriptNodes
 
-The `src/script-nodes-basic` folder contains the script nodes from the [script-nodes-basic](http://github.com/PhaserEditor2D/script-nodes-basic/) project.
-
-You can add your own script nodes to the `src/script-nodes` folder.
+`/src/script-nodes-basic` has script nodes. Add custom ones to `/src/script-nodes`.
 
 ## About
 
-This project template was created by the Phaser Editor 2D team.
+Created by the Phaser Editor 2D team.
+
+Feel free to adjust and enhance the template for your game development needs!
