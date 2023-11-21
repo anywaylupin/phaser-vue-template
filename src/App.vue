@@ -17,17 +17,13 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <style>
 #app {
-  max-width: 1280px;
   height: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-
   font-weight: normal;
 }
 
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  height: 100%;
 }
 
 .logo {
@@ -64,7 +60,6 @@ nav a:first-of-type {
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 
   header {

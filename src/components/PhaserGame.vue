@@ -1,16 +1,17 @@
 <template>
   <div class="game">
+    <PhaserGame v-if="game" :createGame="game" />
+
     <div class="buttons">
       <button type="button" @click="pause">✋ Pause</button>
     </div>
-    <PhaserGame v-if="game" :createGame="game" />
   </div>
 </template>
 
 <script setup lang="ts">
 import PhaserGame from 'nuxtjs-phaser/phaserGame.vue';
 
-defineProps<{ game: Phaser.Game }>();
+defineProps<{ game: () => Phaser.Game }>();
 defineEmits<(e: 'game:pause', data: any) => void>();
 
 const emit = (eventName: string) => NuxtPhaser.eventEmitter?.emit(eventName);
@@ -20,6 +21,7 @@ const pause = () => emit('game:pause');
 <style scoped>
 .buttons {
   display: inline;
+  position: absolute;
   left: 28rem;
   top: 7rem;
   z-index: 1;

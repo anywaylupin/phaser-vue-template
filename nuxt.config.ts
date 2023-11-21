@@ -1,4 +1,3 @@
-import NuxtPhaser from 'nuxtjs-phaser';
 import defineNuxtConfig from './nuxt.config';
 
 export default defineNuxtConfig({
@@ -8,6 +7,6 @@ export default defineNuxtConfig({
       title: 'Nuxt App with Phaser powered by nuxtjs-phaser'
     }
   },
-  plugins: [{ src: 'node_modules/nuxtjs-phaser', mode: 'client' }],
-  module: [NuxtPhaser]
+  css: ['@/styles/main.css'],
+  plugins: [{ src: 'node_modules/nuxtjs-phaser', mode: 'client' }]
 });
