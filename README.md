@@ -1,173 +1,117 @@
-# Phaser + PhaserEditor2D + Vue + TypeScript Project Template
+# Basic TypeScript project template
 
-## Overview
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-basic-typescript)
 
-This template integrates Phaser 3, Vue 3, TypeScript, and Phaser Editor 2D v3 for game development. Additionally, it includes setup instructions for Visual Studio Code with Volar for an enhanced development experience and a GitHub Pages deployment workflow for easy hosting.
+This is a Phaser Editor 2D v3 project template.
 
-![Header](static/header.png)
+## Configuration
+
+* It includes the latest Phaser v3 runtime as a node package.
+* It is coded in TypeScript. The `tsc` is included as a node package.
+* It includes a VS Code project configuration (`jsconfig.json` file).
+
+## Compiles the source code
+
+This project is based on TypeScript so for getting the game, first, you need to install TypeScript and other dependencies:
+
+```bash
+npm install
+npm update
+```
+
+Then, for running the game, you need to compile the TypeScript files:
+
+```bash
+npm run build
+```
+
+It outputs the JavaScript code into the `game.js` file.
+
+Often, you would like to run the TypeScript compiler in watch mode:
+
+```bash
+npm run watch
+```
+
+## Run the editor
+
+* If you have NodeJS installed, you can run the editor using the `editor` NPM script, defined in the `package.json` file:
+
+    ```bash
+    npm install
+    npm run editor
+    ```
+
+* If you are in a remote environment (like the Gitpod.io IDE), then run the editor like this:
+
+    ```bash
+    npm run editor-remote
+    ```
+
+* If you want to see all the editor options, run:
+
+    ```bash
+    npx phasereditor2d-launcher -help
+    ```
+
+* If Phaser Editor 2D Core is globally installed, you can run:
+
+    ```bash
+    PhaserEditor2D -project .
+    ```
+
+## Gitpod
+
+This repository is ready for start coding in Gitpod, a Cloud Development Environment. You only need to [click on this link](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-basic-typescript) for starting a new workspace.
+
+This is what Gitpod does:
+
+* Creates a workspace for this project.
+* Opens VS Code to edit this repo.
+* Installs & updates the dependencies of this repo.
+* Runs Phaser Editor 2D Core server in port `1959`.
+
+In the **Ports** panel in VS Code, it shows the links for opening the editor (port `1959`). It gives you the options of copy the URL, open the URL in a preview panel, or open the URL in a new tab.
 
 ## Recommended IDE Setup
 
-For an optimal development setup, use VSCode with the following extensions:
-
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur)
-- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
-
-If you find the standalone TypeScript plugin slow, consider enabling the more performant Take Over Mode provided by Volar.
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
 ## Type Support for `.vue` Imports in TS
 
-Due to TypeScript limitations with `.vue` imports, use `vue-tsc` for type checking. In VSCode, the TypeScript Vue Plugin (Volar) is essential for TypeScript awareness of `.vue` types.
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-To enable Volar's Take Over Mode for improved performance:
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-1. Disable the built-in TypeScript Extension:
-   - Run `Extensions: Show Built-in Extensions` from VSCode's command palette.
-   - Find `TypeScript and JavaScript Language Features`, right-click, and select `Disable (Workspace)`.
-2. Reload VSCode by running `Developer: Reload Window` from the command palette.
+1. Disable the built-in TypeScript Extension
+    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
 ```sh
-   pnpm install
+pnpm install
 ```
 
-### Development
+### Compile and Hot-Reload for Development
 
 ```sh
-   pnpm dev
+pnpm dev
 ```
 
-### Production Build
+### Type-Check, Compile and Minify for Production
 
 ```sh
-   pnpm build
+pnpm build
 ```
 
-### Unit Tests (Vitest)
+### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-   pnpm test:unit
+pnpm lint
 ```
-
-### End-to-End Tests (Cypress)
-
-For development:
-
-```sh
-   pnpm test:e2e:dev
-```
-
-For production (recommended before deployment):
-
-```sh
-   pnpm build
-   pnpm test:e2e
-```
-
-## Linting (ESLint)
-
-```sh
-   pnpm lint
-```
-
-For detailed Vite configuration, refer to [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## First Steps
-
-Ensure Node.js and npm are installed.
-
-Install dependencies:
-
-```sh
-   pnpm install
-   pnpm update
-```
-
-Run the development server:
-
-```sh
-   pnpm start
-```
-
-Open the browser at `http://127.0.0.1:8080`.
-
-Make a production build:
-
-```sh
-   pnpm build
-```
-
-## Hosting on GitHub Pages
-
-1. Create a GitHub repository.
-2. In **Settings** > **GitHub Pages**, set **GitHub Actions** in the **Source** parameter.
-3. Run the **Build game** workflow in **Actions**.
-4. Check the deployed game URL in **Settings** > **GitHub Pages**.
-5. Subsequent pushes to `main` branch auto-deploy.
-
-Remove `.github/workflows/main.yml` if not deploying to GitHub Pages.
-
-Watch this [video tutorial](https://www.youtube.com/watch?v=lndU7UAjzgo&t=183s) for more details.
-
-## Running the Editor
-
-- Run locally:
-
-```sh
-   pnpm editor
-```
-
-- Run in a remote environment (e.g., Gitpod):
-
-```sh
-   pnpm editor-remote
-```
-
-For more options:
-
-```sh
-   pnpm phasereditor2d-launcher -help
-```
-
-If globally installed:
-
-```sh
-   PhaserEditor2D -project .
-```
-
-## Phaser Editor 2D Considerations
-
-### Excluding Files
-
-Use `/skip` to exclude files from the editor project, e.g., `node_modules`.
-
-Learn more about [resource filtering](https://help.phasereditor2d.com/v3/misc/resources-filtering.html).
-
-### Asset Root
-
-Change the asset root by creating an empty `publicroot` file. E.g., `/static/publicroot`.
-
-### Asset Pack Content Hash
-
-Includes content hash for asset pack files. Use `phaser-asset-pack-hashing` for parsing and transforming.
-
-Learn more about [phaser-asset-pack-hashing](https://www.pnpmjs.com/package/phaser-asset-pack-hashing).
-
-### Coding
-
-`/src` contains TypeScript code, including scenes and user components. Visual Studio Code is recommended.
-
-### Scene, User Components, and ScriptNode Configuration
-
-Configured to compile to TypeScript ES modules. Compilers auto-import used classes.
-
-### ScriptNodes
-
-`/src/scripts/script-nodes-basic` has script nodes. Add custom ones to `/src/scripts/script-nodes`.
-
-## About
-
-Created by the Phaser Editor 2D team.
-
-Feel free to adjust and enhance the template for your game development needs!

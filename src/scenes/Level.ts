@@ -1,14 +1,10 @@
 // You can write more code here
 
 /* START OF COMPILED CODE */
-import { GameEvents } from '@/events';
-import { OnPointerDownScript, PushActionScript } from '@/scripts';
-/* START-USER-IMPORTS */
-/* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
   constructor() {
-    super('Level');
+    super('Level')
 
     /* START-USER-CTR-CODE */
     // Write your code here.
@@ -16,33 +12,30 @@ export default class Level extends Phaser.Scene {
   }
 
   editorCreate(): void {
-    // fufuSuperDino
-    const fufuSuperDino = this.add.image(640, 257, 'FufuSuperDino');
+    // dino
+    const dino = this.add.image(640, 302, 'dino')
 
     // onPointerDownScript
-    const onPointerDownScript = new OnPointerDownScript(fufuSuperDino);
+    const onPointerDownScript = new OnPointerDownScript(dino)
 
-    // pushAction
-    new PushActionScript(onPointerDownScript);
+    // pushActionScript
+    new PushActionScript(onPointerDownScript)
 
-    // text
-    const text = this.add.text(640, 458, '', {});
-    text.setOrigin(0.5, 0.5);
-    text.text = 'Phaser 3 + Phaser Editor 2D\nVue + TypeScript';
+    // text_1
+    const text_1 = this.add.text(640, 462, '', {})
+    text_1.setOrigin(0.5, 0)
+    text_1.text = 'Phaser 3 + Phaser Editor 2D + TypeScript'
+    text_1.setStyle({ fontFamily: 'arial', fontSize: '3em' })
 
-    this.events.emit(GameEvents.SCENE_AWAKE);
-
-    this.events.on(GameEvents.SCENE_AWAKE, () => {
-      console.log('like');
-    });
+    this.events.emit('scene-awake')
   }
 
   /* START-USER-CODE */
 
-  // Write your code here
+  // Write your code here.
 
   create() {
-    this.editorCreate();
+    this.editorCreate()
   }
 
   /* END-USER-CODE */

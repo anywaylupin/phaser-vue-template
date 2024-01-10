@@ -1,3 +1,2 @@
-export { default as Boot } from './Boot';
-export { default as Preloader } from './Preloader';
-export { default as Level } from './Level';
+export * from './Level'
+export * from './Preload'
