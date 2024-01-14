@@ -10,12 +10,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@types": ["./types/"],
-      "@styles": ["./static/styles/"]
+      "@types/*": ["./types/*"],
+      "@styles/*": ["./styles/*"]
     },
     "lib": ["es6", "dom", "dom.iterable", "scripthost"],
     "types": ["phaser"],
-    "typeRoots": ["./node_modules/phaser/types"]
+    "typeRoots": ["./node_modules/phaser/types", "./types"]
   },
-  "include": ["vite.config.*", "types/env.d.ts", "src/**/*", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "types", "src/**/*.vue"],
+  "exclude": ["node_modules"]
 }

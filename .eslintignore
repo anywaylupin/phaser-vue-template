@@ -2,6 +2,7 @@ node_modules/
 # Ignore artifacts:
 build/
 dist/
+scripts/
 coverage/
 
 vite-env.d.ts

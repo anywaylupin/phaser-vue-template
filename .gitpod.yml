@@ -1,14 +1,14 @@
 tasks:
   - name: Install
     init: >
-      npm install &&
+      pnpm install &&
       gp sync-done install
   - name: TypeScript compiler
     init: gp sync-await install
-    command: npm run watch
+    command: pnpm start
   - name: Editor server
     init: gp sync-await install # wait for the above 'install' to finish
-    command: npm run editor-remote
+    command: pnpm editor-remote
 ports:
   - port: 1959
     onOpen: open-preview

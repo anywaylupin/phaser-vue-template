@@ -15,14 +15,14 @@ This is a Phaser Editor 2D v3 project template.
 This project is based on TypeScript so for getting the game, first, you need to install TypeScript and other dependencies:
 
 ```bash
-npm install
-npm update
+pnpm install
+pnpm update
 ```
 
 Then, for running the game, you need to compile the TypeScript files:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 It outputs the JavaScript code into the `game.js` file.
@@ -30,7 +30,7 @@ It outputs the JavaScript code into the `game.js` file.
 Often, you would like to run the TypeScript compiler in watch mode:
 
 ```bash
-npm run watch
+pnpm start
 ```
 
 ## Run the editor
@@ -38,14 +38,14 @@ npm run watch
 * If you have NodeJS installed, you can run the editor using the `editor` NPM script, defined in the `package.json` file:
 
     ```bash
-    npm install
-    npm run editor
+    pnpm install
+    pnpm editor
     ```
 
 * If you are in a remote environment (like the Gitpod.io IDE), then run the editor like this:
 
     ```bash
-    npm run editor-remote
+    pnpm editor-remote
     ```
 
 * If you want to see all the editor options, run:
