@@ -16,4 +16,3 @@ import { gameConfig } from '@/game-example';
   height: 100%;
 }
 </style>
-@/game-example

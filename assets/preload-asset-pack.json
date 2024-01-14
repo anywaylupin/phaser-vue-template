@@ -10,7 +10,7 @@
                 "url": "assets/dude.png",
                 "frameConfig": {
                     "frameWidth": 32,
-                    "frameHeight": 32,
+                    "frameHeight": 48,
                     "startFrame": 0,
                     "endFrame": -1,
                     "spacing": 0,
