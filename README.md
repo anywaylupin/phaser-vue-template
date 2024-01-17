@@ -1,65 +1,89 @@
+
 # Phaser + Vue Template
 
-A well-typing game objects and scenes template integrated with Phaser 3, Vue 3, TypeScript, and Phaser Editor 2D v3 for game development.
+This template provides a robust starting point for game development by integrating Phaser 3, Vue 3, TypeScript, and Phaser Editor 2D v3. It is designed to offer well-typed game objects and scenes, allowing developers to create engaging and interactive games with ease.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+For the best development experience, we recommend using [VSCode](https://code.visualstudio.com/) with the following extensions:
 
-## Type Support for `.vue` Imports in TS
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Enable this extension and disable Vetur for Vue 3 support.
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) - Provides additional TypeScript tooling for Vue.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Customize Configuration
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+For specific project configuration details, refer to the [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
+To get started, install the dependencies using `pnpm`.
+
 ```sh
 pnpm install
+```
+
+To update the dependencies to their latest versions:
+
+```sh
 pnpm update
 ```
 
 ### Compile and Hot-Reload for Development
 
+To start the development server with hot-reload support:
+
 ```sh
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for running the game
+### Type-Check, Compile and Minify for Production
+
+When you're ready to build your game for production:
 
 ```sh
 pnpm build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint with ESLint
+
+To ensure your code adheres to the project's coding standards, run the linter:
 
 ```sh
 pnpm lint
 ```
 
-### Run the editor
+### Run the Phaser Editor 2D
+
+To launch the Phaser Editor 2D:
 
 ```sh
 pnpm editor
 ```
 
-### Run the editor in a remote environment
+### Run the Phaser Editor 2D in a Remote Environment
+
+If you're working in a remote environment, you can start the editor with:
 
 ```sh
 pnpm editor-remote
 ```
 
-### See all the editor options
+### View All Phaser Editor 2D Options
+
+To see all available options for the Phaser Editor 2D launcher:
 
 ```sh
 npx phasereditor2d-launcher -help
 ```
+
+## Formatting with Prettier
+
+This project uses Prettier to maintain consistent code formatting. Run the following command to format your codebase:
+
+```sh
+pnpm format
+```
+
+---
+
+Enjoy building your game with Phaser, Vue, and TypeScript! 🎮🚀
